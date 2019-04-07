@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from "./img/logo.png";
+import {Form} from "./components/Form";
+import {Info} from "./components/Info";
+import { AppState } from "./types";
 
-class App extends Component {
+type GlobalState = {
+  appState: AppState
+}
+
+class App extends Component<{}, GlobalState> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      appState: "default"
+    };
+  }
+  setAppState = (newAppState: AppState) => {
+    this.setState({
+      appState: newAppState
+    });
+  };
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <img src={logo} alt="logo" />
         </header>
+        <main>
+          <Info appState={this.state.appState} />
+          <Form appState={this.state.appState} setAppState={this.setAppState} />
+        </main>
       </div>
     );
   }
