@@ -48,6 +48,6 @@ const codes = generateCodes();
 fs.writeFile("./public/codes.json", JSON.stringify(codes), (err) => {
    if (err) console.log(err);
    else {
-       console.log("Codes are successfully generated in public folder in codes.json");
+       console.log("Codes are successfully generated in public folder as codes.json");
    }
 });

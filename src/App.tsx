@@ -14,12 +14,15 @@ class App extends Component<{}, GlobalState> {
     this.state = {
       appState: "default"
     };
+    this.setAppState = this.setAppState.bind(this);
   }
-  setAppState = (newAppState: AppState) => {
+
+  setAppState(newAppState: AppState) {
     this.setState({
       appState: newAppState
     });
-  };
+  }
+
   render() {
     return (
       <div className="App">
