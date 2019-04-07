@@ -22,7 +22,7 @@ const styles = createStyles({
   },
   root: {
     height: "95vh",
-    width: "95vw",
+    width: "98vw",
     flexDirection: "column",
     margin: "0 auto",
     padding: 0
