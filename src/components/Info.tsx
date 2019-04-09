@@ -13,17 +13,13 @@ export const Info = ({ appState }: InfoProps) => {
         "title": "Get a Golden Ticket to Amsterdam!",
         "content": placeholder
       },
-      "error": {
-        "title": "Get a Golden Ticket to Amsterdam!",
-        "content": placeholder
-      },
       "win": {
         "title": "Congratulations! You Won!",
-        "content": placeholder
+        "content": placeholder.slice(0, 200)
       },
       "lose": {
         "title": "Better luck next time",
-        "content": placeholder
+        "content": placeholder.slice(0, 200)
       }
     };
     return <section>

@@ -1,1 +1,1 @@
-export type AppState = "default" | "error" | "win" | "lose";
+export type AppState = "default" | "win" | "lose";
